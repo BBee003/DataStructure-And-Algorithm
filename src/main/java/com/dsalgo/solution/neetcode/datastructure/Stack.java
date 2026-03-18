@@ -27,4 +27,8 @@ public class Stack<T> {
         if (isEmpty()) return null;
         return data.getLast();
     }
+
+    public int size() {
+        return data.size();
+    }
 }
