@@ -4,7 +4,7 @@ import com.dsalgo.solution.neetcode.datastructure.*;
 
 public class DailyTemperatures {
 
-    /*
+    /**
      * STPES:
      *      1. First loop to get the individual termperature
      *      2. Second loop to calculate the number of days after current day before a warmer temperature appear on a future day
@@ -29,7 +29,7 @@ public class DailyTemperatures {
         return results;
     }
 
-    /*
+    /**
      * COMPLEXITY:
      * 1. Time: O(n)
      * 2. Space: O(n)

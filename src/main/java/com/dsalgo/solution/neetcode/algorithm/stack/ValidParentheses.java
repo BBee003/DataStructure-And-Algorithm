@@ -4,7 +4,7 @@ import com.dsalgo.solution.neetcode.datastructure.Stack;
 
 public class ValidParentheses {
 
-    /*
+    /**
      * Steps:
      *      1. check each brackets of input string
      *      2. if open bracket detect, push to stack
@@ -39,7 +39,7 @@ public class ValidParentheses {
         return bracket == '(' || bracket == '[' || bracket == '{';
     }
 
-    /*
+    /**
      * STEPS:
      *      1. Iterate through each character in the input string.
      *      2. If the character is an opening bracket, push it onto the stack.
