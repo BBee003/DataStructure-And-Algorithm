@@ -1,4 +1,4 @@
-package com.dsalgo.solution.neetcode.datastructure;
+package com.dsalgo.solution.neetcode.datastructure.stack;
 
 import java.util.*;
 

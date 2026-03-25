@@ -1,4 +1,4 @@
-package com.dsalgo.solution.neetcode.datastructure;
+package com.dsalgo.solution.neetcode.datastructure.stack;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

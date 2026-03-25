@@ -1,6 +1,6 @@
 package com.dsalgo.solution.neetcode.algorithm.stack;
 
-import com.dsalgo.solution.neetcode.datastructure.Stack;
+import com.dsalgo.solution.neetcode.datastructure.stack.Stack;
 
 public class EvaluateReversePolishNotation {
     

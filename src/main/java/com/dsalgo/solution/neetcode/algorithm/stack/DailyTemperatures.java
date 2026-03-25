@@ -1,6 +1,6 @@
 package com.dsalgo.solution.neetcode.algorithm.stack;
 
-import com.dsalgo.solution.neetcode.datastructure.*;
+import com.dsalgo.solution.neetcode.datastructure.stack.Stack;
 
 public class DailyTemperatures {
 

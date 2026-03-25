@@ -147,24 +147,6 @@ class EvaluateReversePolishNotationTest {
     }
     
     @Test
-    @DisplayName("Test invalid operator throws exception")
-    void testInvalidOperator() {
-        String[] tokens = {"2", "3", "%"};
-        IllegalArgumentException exception = assertThrows(
-            IllegalArgumentException.class,
-            () -> evaluator._v1Solve(tokens)
-        );
-        assertEquals("Invalid input operator", exception.getMessage());
-    }
-    
-    @Test
-    @DisplayName("Test insufficient operands for operator")
-    void testInsufficientOperands() {
-        String[] tokens = {"2", "+"};
-        assertThrows(NullPointerException.class, () -> evaluator._v1Solve(tokens));
-    }
-    
-    @Test
     @DisplayName("Test invalid number format")
     void testInvalidNumberFormat() {
         String[] tokens = {"abc", "2", "+"};

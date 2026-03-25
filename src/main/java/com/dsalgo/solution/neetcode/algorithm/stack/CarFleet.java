@@ -1,7 +1,7 @@
 package com.dsalgo.solution.neetcode.algorithm.stack;
 
 import java.util.*;
-import com.dsalgo.solution.neetcode.datastructure.Stack;
+import com.dsalgo.solution.neetcode.datastructure.stack.Stack;
 
 public class CarFleet {
 
