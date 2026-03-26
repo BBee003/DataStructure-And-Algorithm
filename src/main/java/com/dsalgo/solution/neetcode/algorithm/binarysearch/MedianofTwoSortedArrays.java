@@ -8,7 +8,6 @@ public class MedianofTwoSortedArrays {
      *      1. Merge two inputs by using two pointers technique by maintaining ascending order.
      *      2. If the size of array is even, ((n / 2) + ((n/2)-1)) / 2 -> median
      *      3. If the size of array is odd, n / 2 -> median
-     * 
      * COMPLEXITY:
      *      1. Time: O(n+m)
      *      2. Space: O(n+m)
@@ -19,7 +18,7 @@ public class MedianofTwoSortedArrays {
         if (merged.length%2 == 0) {
             return (double) (merged[merged.length/2] + merged[(merged.length/2)-1]) / 2;
         } else {
-            return (double) merged[merged.length/2];
+            return merged[merged.length/2];
         }
     }
 
@@ -75,6 +74,39 @@ public class MedianofTwoSortedArrays {
     }
 
     public double _v3Solve(int[] nums1, int[] nums2) {
-        return 0;
+        if (nums1.length == 0 && nums2.length == 0) throw new IllegalArgumentException("Input arrays are empty");
+
+        if (nums1.length > nums2.length) {
+            return _v3Solve(nums2, nums1);
+        }
+        
+        int total = nums1.length + nums2.length;
+        int half = (total+1) / 2; // for odd
+        int left = 0, right = nums1.length; // not nums1.length-1 because valid cut range is 0 to nums1.length
+
+        while(left <= right) {
+            int cut1 = left + (right - left) / 2;
+            int cut2 = half - cut1;
+
+            int rightMin1 = cut1 < nums1.length ? nums1[cut1] : Integer.MAX_VALUE;
+            int leftMax1 = cut1 > 0 ? nums1[cut1-1] : Integer.MIN_VALUE;
+
+            int rightMin2 = cut2 < nums2.length ? nums2[cut2] : Integer.MAX_VALUE;
+            int leftMax2 = cut2 > 0 ? nums2[cut2-1] : Integer.MIN_VALUE;
+
+            if (Math.max(leftMax1, leftMax2) <= Math.min(rightMin1, rightMin2)) {
+                if (total % 2 == 0) {
+                    return (Math.max(leftMax1, leftMax2) + Math.min(rightMin1, rightMin2)) / 2.0;
+                } else {
+                    return Math.max(leftMax1, leftMax2);
+                }
+            } else if (leftMax1 > rightMin2) {
+                right = cut1 - 1;
+            } else {
+                left = cut1 + 1;
+            }
+        }
+
+        throw new IllegalArgumentException("Input arrays are not sorted in ascending.");
     }
 }
