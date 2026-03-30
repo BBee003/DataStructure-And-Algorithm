@@ -85,6 +85,42 @@ public class PermutationinString {
      *  2. Space: O(26) -> O(1)
      */
     public boolean _v3Solve(String s1, String s2) {
-        return false;
+        if (s1.isEmpty() || s2.isEmpty() || s2.length() < s1.length()) return false;
+
+        int[] s1F = new int[26];
+        int[] s2F = new int[26];
+        for (int i=0; i<s1.length(); i++) {
+            s1F[s1.charAt(i)-'a']++;
+            s2F[s2.charAt(i)-'a']++;
+        }
+
+        int matches = 0;
+        for (int i=0; i<26; i++) {
+            if (s1F[i] == s2F[i]) matches++;
+        }
+        
+        int l=0;
+        for (int r=s1.length(); r<s2.length(); r++) {
+            if (matches == 26) return true;
+            int index = s2.charAt(r) - 'a';
+            s2F[index]++;
+
+            if (s1F[index] == s2F[index]) {
+                matches++;
+            } else if ((s1F[index]+1) == s2F[index]) {
+                matches--;
+            }
+
+            index = s2.charAt(l)-'a';
+            s2F[index]--;
+            if (s1F[index] == s2F[index]) {
+                matches++;
+            } else if ((s1F[index]-1) == s2F[index]) {
+                matches--;
+            }
+            l++;
+        }
+
+        return matches == 26;
     }
 }
