@@ -12,7 +12,7 @@ class MinimumWindowSubstringTest {
         String s = "ADOBECODEBANC";
         String t = "ABC";
 
-        assertEquals("BANC", solution._v1Solve(s, t));
+        assertEquals("BANC", solution._v2Solve(s, t));
     }
 
     @Test
@@ -20,7 +20,7 @@ class MinimumWindowSubstringTest {
         String s = "a";
         String t = "a";
 
-        assertEquals("a", solution._v1Solve(s, t));
+        assertEquals("a", solution._v2Solve(s, t));
     }
 
     @Test
@@ -28,7 +28,7 @@ class MinimumWindowSubstringTest {
         String s = "a";
         String t = "aa";
 
-        assertEquals("", solution._v1Solve(s, t));
+        assertEquals("", solution._v2Solve(s, t));
     }
 
     @Test
@@ -36,7 +36,7 @@ class MinimumWindowSubstringTest {
         String s = "";
         String t = "ABC";
 
-        assertEquals("", solution._v1Solve(s, t));
+        assertEquals("", solution._v2Solve(s, t));
     }
 
     @Test
@@ -44,7 +44,7 @@ class MinimumWindowSubstringTest {
         String s = "ADOBECODEBANC";
         String t = "";
 
-        assertEquals("", solution._v1Solve(s, t));
+        assertEquals("", solution._v2Solve(s, t));
     }
 
     @Test
@@ -52,7 +52,7 @@ class MinimumWindowSubstringTest {
         String s = "";
         String t = "";
 
-        assertEquals("", solution._v1Solve(s, t));
+        assertEquals("", solution._v2Solve(s, t));
     }
 
     @Test
@@ -60,7 +60,7 @@ class MinimumWindowSubstringTest {
         String s = "ABC";
         String t = "ABCD";
 
-        assertEquals("", solution._v1Solve(s, t));
+        assertEquals("", solution._v2Solve(s, t));
     }
 
     @Test
@@ -68,7 +68,7 @@ class MinimumWindowSubstringTest {
         String s = "ABC";
         String t = "ABC";
 
-        assertEquals("ABC", solution._v1Solve(s, t));
+        assertEquals("ABC", solution._v2Solve(s, t));
     }
 
     @Test
@@ -76,7 +76,7 @@ class MinimumWindowSubstringTest {
         String s = "XYZABC";
         String t = "A";
 
-        assertEquals("A", solution._v1Solve(s, t));
+        assertEquals("A", solution._v2Solve(s, t));
     }
 
     @Test
@@ -84,7 +84,7 @@ class MinimumWindowSubstringTest {
         String s = "XYZ";
         String t = "A";
 
-        assertEquals("", solution._v1Solve(s, t));
+        assertEquals("", solution._v2Solve(s, t));
     }
 
     @Test
@@ -92,7 +92,7 @@ class MinimumWindowSubstringTest {
         String s = "BAC";
         String t = "ABC";
 
-        assertEquals("BAC", solution._v1Solve(s, t));
+        assertEquals("BAC", solution._v2Solve(s, t));
     }
 
     @Test
@@ -100,7 +100,7 @@ class MinimumWindowSubstringTest {
         String s = "AAABBB";
         String t = "AAB";
 
-        assertEquals("AAB", solution._v1Solve(s, t));
+        assertEquals("AAB", solution._v2Solve(s, t));
     }
 
     @Test
@@ -108,7 +108,7 @@ class MinimumWindowSubstringTest {
         String s = "AAABBBCCC";
         String t = "ABC";
 
-        assertEquals("ABBC", solution._v1Solve(s, t));
+        assertEquals("ABBBC", solution._v2Solve(s, t));
     }
 
     @Test
@@ -116,7 +116,7 @@ class MinimumWindowSubstringTest {
         String s = "ABCXYZ";
         String t = "ABC";
 
-        assertEquals("ABC", solution._v1Solve(s, t));
+        assertEquals("ABC", solution._v2Solve(s, t));
     }
 
     @Test
@@ -124,7 +124,7 @@ class MinimumWindowSubstringTest {
         String s = "XYZABC";
         String t = "ABC";
 
-        assertEquals("ABC", solution._v1Solve(s, t));
+        assertEquals("ABC", solution._v2Solve(s, t));
     }
 
     @Test
@@ -132,7 +132,7 @@ class MinimumWindowSubstringTest {
         String s = "AAAAAAA";
         String t = "AAA";
 
-        assertEquals("AAA", solution._v1Solve(s, t));
+        assertEquals("AAA", solution._v2Solve(s, t));
     }
 
     @Test
@@ -140,7 +140,7 @@ class MinimumWindowSubstringTest {
         String s = "XYZ";
         String t = "ABC";
 
-        assertEquals("", solution._v1Solve(s, t));
+        assertEquals("", solution._v2Solve(s, t));
     }
 
     @Test
@@ -148,7 +148,7 @@ class MinimumWindowSubstringTest {
         String s = "THISISATESTSTRING";
         String t = "TST";
 
-        assertEquals("TST", solution._v1Solve(s, t));
+        assertEquals("TST", solution._v2Solve(s, t));
     }
 
     @Test
@@ -156,7 +156,7 @@ class MinimumWindowSubstringTest {
         String s = "ABABABAB";
         String t = "AAB";
 
-        assertEquals("AAB", solution._v1Solve(s, t));
+        assertEquals("ABA", solution._v2Solve(s, t));
     }
 
     @Test
@@ -164,7 +164,7 @@ class MinimumWindowSubstringTest {
         String s = "AB";
         String t = "AB";
 
-        assertEquals("AB", solution._v1Solve(s, t));
+        assertEquals("AB", solution._v2Solve(s, t));
     }
 
     @Test
@@ -179,7 +179,7 @@ class MinimumWindowSubstringTest {
         t.append("XYZ");
 
         // This should complete without timeout and return a valid result
-        String result = solution._v1Solve(s.toString(), t.toString());
+        String result = solution._v2Solve(s.toString(), t.toString());
         assertEquals("XYZ", result);
     }
 
@@ -188,7 +188,7 @@ class MinimumWindowSubstringTest {
         String s = "abcABC";
         String t = "ABC";
 
-        assertEquals("ABC", solution._v1Solve(s, t));
+        assertEquals("ABC", solution._v2Solve(s, t));
     }
 
     @Test
@@ -196,6 +196,6 @@ class MinimumWindowSubstringTest {
         String s = "123!@#ABC";
         String t = "ABC";
 
-        assertEquals("ABC", solution._v1Solve(s, t));
+        assertEquals("ABC", solution._v2Solve(s, t));
     }
 }
